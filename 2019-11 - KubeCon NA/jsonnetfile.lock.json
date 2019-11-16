@@ -67,6 +67,17 @@
       "sum": "yZWXfbXD1yJk08iWr5aY/SlGK+6iwbYtbR7uec8nFL8="
     },
     {
+      "name": "kube-thanos",
+      "source": {
+        "git": {
+          "remote": "https://github.com/thanos-io/kube-thanos",
+          "subdir": "jsonnet/kube-thanos"
+        }
+      },
+      "version": "05d490681404e9dae6e42284b6a2776493a9355c",
+      "sum": "rTPcq23U6UNXoN2Fpxt5JzIYTnylMuG794lr9Pt4xEc="
+    },
+    {
       "name": "kubernetes-mixin",
       "source": {
         "git": {
