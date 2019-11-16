@@ -5,6 +5,21 @@ local kp =
     _config+:: {
       namespace: 'monitoring',
     },
+
+    prometheus+: {
+      prometheus+: {
+        spec+: {
+          remoteWrite: [
+            {
+              url: 'http://kubecon2019.observatorium.io/api/v1/receive',
+              writeRelabelConfigs: [
+                {targetLabel: 'cluster', replacement: 'metalmatze-pi4'},
+              ],
+            },
+          ],
+        },
+      },
+    },
   };
 
 { ['setup/0namespace-' + name]: kp.kubePrometheus[name] for name in std.objectFields(kp.kubePrometheus) } +

@@ -15,6 +15,11 @@ spec:
   nodeSelector:
     kubernetes.io/os: linux
   podMonitorSelector: {}
+  remoteWrite:
+  - url: http://kubecon2019.observatorium.io/api/v1/receive
+    writeRelabelConfigs:
+    - replacement: metalmatze-pi4
+      targetLabel: cluster
   replicas: 2
   resources:
     requests:
